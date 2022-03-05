@@ -12,9 +12,8 @@ class TicTacToe
     # row checks
 
     @board.each do |row|
-      ['o', 'x'].each do |play|
-        return play if row.all?(play)
-      end
+      return 'o' if row.all?('o') 
+      return 'x' if row.all?('x')
     end
 
     # if row1[0] == "o" && row1[1] == "o" && row1[2] == "o"
@@ -43,6 +42,12 @@ class TicTacToe
 
     # column checks
 
+    @board.length.times do |i|
+      column = @board.map { |row| row[i] }
+      return 'o' if column.all?('o') 
+      return 'x' if column.all?('x') 
+    end
+
     # if row1[0] == "o" && row2[0] == "o" && row3[0] == "o"
     #   return "o"
     # end
@@ -67,7 +72,7 @@ class TicTacToe
     #   return "x"
     # end
 
-    # # diagonal checks
+    # diagonal checks
 
     # if row1[0] == "o" && row2[1] == "o" && row3[2] == "o"
     #   return "o"
