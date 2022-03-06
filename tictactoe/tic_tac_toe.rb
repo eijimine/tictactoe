@@ -15,6 +15,8 @@ class TicTacToe
 
     # column checks
 
+    # turns columns into rows and checks if all values are of one kind
+
     @board.length.times do |i|
       column = @board.map { |row| row[i] }
       return 'o' if column.all?('o') 
@@ -41,6 +43,8 @@ class TicTacToe
 
 
     # draws and unfinished
+
+    # check for any empty spaces on the board, otherwise delcare as draw
 
     if @board.flatten.any?(" ")
       'unfinished'
