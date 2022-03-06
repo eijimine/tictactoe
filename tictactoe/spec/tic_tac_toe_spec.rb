@@ -107,41 +107,41 @@ describe TicTacToe do
     end
   end
 
-  # describe "diagonals" do
-  #   it "returns the correct winner when match found in backward diagonal" do
-  #     board_o = [
-  #       ["o", "x", " "],
-  #       ["x", "o", " "],
-  #       [" ", " ", "o"]
-  #     ]
+  describe "diagonals" do
+    it "returns the correct winner when match found in backward diagonal" do
+      board_o = [
+        ["o", "x", " "],
+        ["x", "o", " "],
+        [" ", " ", "o"]
+      ]
 
-  #     board_x = [
-  #       ["x", "o", " "],
-  #       ["o", "x", " "],
-  #       ["o", " ", "x"]
-  #     ]
+      board_x = [
+        ["x", "o", " "],
+        ["o", "x", " "],
+        ["o", " ", "x"]
+      ]
 
-  #     expect(TicTacToe.new(board_o).winner).to eq("o")
-  #     expect(TicTacToe.new(board_x).winner).to eq("x")
-  #   end
+      expect(TicTacToe.new(board_o).winner).to eq("o")
+      expect(TicTacToe.new(board_x).winner).to eq("x")
+    end
 
-  #   it "returns the correct winner when match found in forward diagonal" do
-  #     board_o = [
-  #       [" ", "x", "o"],
-  #       ["x", "o", " "],
-  #       ["o", " ", " "]
-  #     ]
+    it "returns the correct winner when match found in forward diagonal" do
+      board_o = [
+        [" ", "x", "o"],
+        ["x", "o", " "],
+        ["o", " ", " "]
+      ]
 
-  #     board_x = [
-  #       ["o", "o", "x"],
-  #       ["o", "x", " "],
-  #       ["x", " ", " "]
-  #     ]
+      board_x = [
+        ["o", "o", "x"],
+        ["o", "x", " "],
+        ["x", " ", " "]
+      ]
 
-  #     expect(TicTacToe.new(board_o).winner).to eq("o")
-  #     expect(TicTacToe.new(board_x).winner).to eq("x")
-  #   end
-  # end
+      expect(TicTacToe.new(board_o).winner).to eq("o")
+      expect(TicTacToe.new(board_x).winner).to eq("x")
+    end
+  end
 
   # describe "draws" do
   #   it "returns 'draw' when the board is a draw" do
@@ -180,29 +180,29 @@ describe TicTacToe do
       expect(TicTacToe.new(board).winner).to eq("o")
     end
 
-  #   it "returns the correct winner when match found on a forward diagonal" do
-  #     board = [
-  #       [" ", "x", "x", " ", "o"],
-  #       [" ", "x", " ", "o", " "],
-  #       ["x", "x", "o", " ", " "],
-  #       [" ", "o", " ", " ", " "],
-  #       ["o", " ", " ", " ", " "]
-  #     ]
+    it "returns the correct winner when match found on a forward diagonal" do
+      board = [
+        [" ", "x", "x", " ", "o"],
+        [" ", "x", " ", "o", " "],
+        ["x", "x", "o", " ", " "],
+        [" ", "o", " ", " ", " "],
+        ["o", " ", " ", " ", " "]
+      ]
 
-  #     expect(TicTacToe.new(board).winner).to eq("o")
-  #   end
+      expect(TicTacToe.new(board).winner).to eq("o")
+    end
 
-  #   it "returns the correct winner when match found on a backward diagonal" do
-  #     board = [
-  #       ["o", "x", "x", " ", " "],
-  #       [" ", "o", " ", "x", " "],
-  #       ["x", "x", "o", " ", " "],
-  #       [" ", " ", " ", "o", " "],
-  #       [" ", " ", " ", " ", "o"]
-  #     ]
+    it "returns the correct winner when match found on a backward diagonal" do
+      board = [
+        ["o", "x", "x", " ", " "],
+        [" ", "o", " ", "x", " "],
+        ["x", "x", "o", " ", " "],
+        [" ", " ", " ", "o", " "],
+        [" ", " ", " ", " ", "o"]
+      ]
 
-  #     expect(TicTacToe.new(board).winner).to eq("o")
-  #   end
+      expect(TicTacToe.new(board).winner).to eq("o")
+    end
   # end
 
   # describe "unfinished" do

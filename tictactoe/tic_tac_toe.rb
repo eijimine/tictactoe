@@ -74,6 +74,21 @@ class TicTacToe
 
     # diagonal checks
 
+    # creating arrays to be made into diagonal row
+    forward = []
+    backward = []
+
+    # Backward - iterate through each row while also increasing the index value
+    # Forward - starting from the last row, decrease the row index with each
+    #           loop while increasing the column index
+    @board.each_with_index do |row, i|
+      backward << row[i]
+      forward << @board[@board.length - (i + 1)][i]
+    end
+
+    return 'o' if forward.all?('o') || backward.all?('o')
+    return 'x' if forward.all?('x') || backward.all?('x')
+
     # if row1[0] == "o" && row2[1] == "o" && row3[2] == "o"
     #   return "o"
     # end
