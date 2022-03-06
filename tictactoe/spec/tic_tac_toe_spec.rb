@@ -143,17 +143,17 @@ describe TicTacToe do
     end
   end
 
-  # describe "draws" do
-  #   it "returns 'draw' when the board is a draw" do
-  #     board = [
-  #       ["o", "x", "o"],
-  #       ["o", "x", "x"],
-  #       ["x", "o", "o"]
-  #     ]
+  describe "draws" do
+    it "returns 'draw' when the board is a draw" do
+      board = [
+        ["o", "x", "o"],
+        ["o", "x", "x"],
+        ["x", "o", "o"]
+      ]
 
-  #     expect(TicTacToe.new(board).winner).to eq("draw")
-  #   end
-  # end
+      expect(TicTacToe.new(board).winner).to eq("draw")
+    end
+  end
 
   describe "5 x 5 board" do
     it "returns the correct winner when match found on a row" do
@@ -203,17 +203,17 @@ describe TicTacToe do
 
       expect(TicTacToe.new(board).winner).to eq("o")
     end
-  # end
+  end
 
-  # describe "unfinished" do
-  #   it "returns 'unfinished' when the board not finished yet" do
-  #     board = [
-  #       ["o", "x", "o"],
-  #       ["o", "x", "x"],
-  #       ["x", "o", " "]
-  #     ]
+  describe "unfinished" do
+    it "returns 'unfinished' when the board not finished yet" do
+      board = [
+        ["o", "x", "o"],
+        ["o", "x", "x"],
+        ["x", "o", " "]
+      ]
 
-  #     expect(TicTacToe.new(board).winner).to eq("unfinished")
-  #   end
+      expect(TicTacToe.new(board).winner).to eq("unfinished")
+    end
   end
 end

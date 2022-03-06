@@ -105,6 +105,10 @@ class TicTacToe
     #   return "x"
     # end
 
-    # return "draw"
+    if @board.flatten.any?(" ")
+      'unfinished'
+    else
+      'draw'
+    end
   end
 end
