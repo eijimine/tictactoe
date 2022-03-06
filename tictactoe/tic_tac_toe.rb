@@ -7,6 +7,8 @@ class TicTacToe
 
     # row checks
 
+    # check each row to see if all values are of one kind
+
     @board.each do |row|
       return 'o' if row.all?('o') 
       return 'x' if row.all?('x')
